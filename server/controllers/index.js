@@ -104,7 +104,6 @@ const hostPage4 = async (req, res) => {
   try {
     const docs = await Dog.find({}).lean().exec();
 
-    // Once we get back the docs array, we can send it to page1.
     return res.render('page4', { dogs: docs });
   } catch (err) {
     console.log(err);
